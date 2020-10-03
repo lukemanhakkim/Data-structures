@@ -35,11 +35,24 @@ def selection_sort(array):
     return array
     
 
+def insertion_sort(array):
+
+    for i in range(1, len(array)):
+		key_insert_item = array[i]
+        j = i - 1
+        while j >= 0 and array[j] > key_insert_item:
+			array[j + 1] = array[j]
+            j -= 1
+        array[j + 1] = key_insert_item
+    return array
+
 
 if __name__ == '__main__':
-	
+
 	array = [5,7,77,1,3,4,9]
 	s1 = bubble_sort(array)
 	s2 = selection_sort(array)
+	s3 = insertion_sort(array)
 	print(s1)                
 	print(s2)
+	print(s3) 
